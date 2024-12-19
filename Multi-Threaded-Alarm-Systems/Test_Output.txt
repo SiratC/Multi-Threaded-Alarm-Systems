@@ -1,0 +1,70 @@
+crimson 267 % a.out
+alarm> Start_Alarm(1): Group(5) 60 test11
+Alarm(1) Inserted by Main Thread(1) Into Alarm List at 1733265825:Group(5) 60 test11
+Alarm Group Display Creation Thread Created New Display Alarm Thread(0) For Alarm(1) at 1733265825: Group(5) 60 test11
+alarm> Start_Alarm(2): Group(6) 60 test21
+Alarm(2) Inserted by Main Thread(1) Into Alarm List at 1733265829:Group(6) 60 test21
+Alarm Group Display Creation Thread Created New Display Alarm Thread(1) For Alarm(2) at 1733265829: Group(6) 60 test21
+alarm> Cancel_Alarm(1)
+Alarm(1) Cancelled at 1733265836: 60 test11
+alarm> Display Thread (0) Has Stopped Printing Message of Alarm(1) at 1733265837: Group(5) 60 test11
+No More Alarms in Group(5) Alarm Removal Thread Has Removed Display Thread(0) at 1733265837: Group(5) 60 test11
+Cancel_Alarm(2)
+Alarm(2) Cancelled at 1733265840: 60 test21
+alarm> Display Thread (1) Has Stopped Printing Message of Alarm(2) at 1733265841: Group(6) 60 test21
+No More Alarms in Group(6) Alarm Removal Thread Has Removed Display Thread(1) at 1733265841: Group(6) 60 test21
+View_Alarms
+There are no alarms to be viewed
+alarm> Start_Alarm(1): Group(5) 60 test11
+Alarm(1) Inserted by Main Thread(1) Into Alarm List at 1733265852:Group(5) 60 test11
+Alarm Group Display Creation Thread Created New Display Alarm Thread(2) For Alarm(1) at 1733265852: Group(5) 60 test11
+alarm> Start_Alarm(2): Group(6) 60 test21
+Alarm(2) Inserted by Main Thread(1) Into Alarm List at 1733265856:Group(6) 60 test21
+Alarm Group Display Creation Thread Created New Display Alarm Thread(3) For Alarm(2) at 1733265856: Group(6) 60 test21
+alarm> Start_Alarm(3): Group(1) 100 test31
+Alarm(3) Inserted by Main Thread(1) Into Alarm List at 1733265862:Group(1) 100 test31
+Alarm Group Display Creation Thread Created New Display Alarm Thread(4) For Alarm(3) at 1733265862: Group(1) 100 test31
+alarm> Start_Alarm(4): Group(2) 200 test41
+Alarm(4) Inserted by Main Thread(1) Into Alarm List at 1733265867:Group(2) 200 test41
+Alarm Group Display Creation Thread Created New Display Alarm Thread(5) For Alarm(4) at 1733265867: Group(2) 200 test41
+alarm> View_Alarms
+view_alarms starting at 1733265872:1733265872
+1. Display Thread 2 Assigned:
+	1a. Alarm(1): Created at 1733265852 Assigned at 1733265852 60 test11 Status active
+2. Display Thread 3 Assigned:
+	2a. Alarm(2): Created at 1733265856 Assigned at 1733265856 60 test21 Status active
+3. Display Thread 4 Assigned:
+	3a. Alarm(3): Created at 1733265862 Assigned at 1733265862 100 test31 Status active
+4. Display Thread 5 Assigned:
+	4a. Alarm(4): Created at 1733265867 Assigned at 1733265867 200 test41 Status active
+alarm> Change_Alarm(34): Group(5) 20 tester
+No alarm is present in alarm list with alarm_id 34
+alarm> Change_Alarm(3): Group(1) 200 testy
+Alarm(3) Changed at 1733265885:Group(1) 200 testy
+alarm> Display Thread (4) Starts to Print Changed Message Alarm(3) at 1733265886: Group(1) 100 testy
+Change_Alarm(4): Group(5) 20 tester
+Alarm(4) Changed at 1733265891:Group(5) 20 tester
+Display Thread(5) Has Taken Over Printing Message of Alarm(4) at 1733265891: Changed Group(2) 20 tester
+alarm> Display Thread (5) Has Stopped Printing Message of Alarm(4) at 1733265892: Changed Group(2) 200 tester
+No More Alarms in Group(2) Alarm Removal Thread Has Removed Display Thread(5) at 1733265892: Group(2) 200 tester
+View_Alarms
+view_alarms starting at 1733265900:1733265900
+1. Display Thread 2 Assigned:
+	1a. Alarm(1): Created at 1733265852 Assigned at 1733265852 60 test11 Status active
+	1b. Alarm(4): Created at 1733265867 Assigned at 1733265891 20 tester Status active
+2. Display Thread 3 Assigned:
+	2a. Alarm(2): Created at 1733265856 Assigned at 1733265856 60 test21 Status active
+3. Display Thread 4 Assigned:
+	3a. Alarm(3): Created at 1733265862 Assigned at 1733265862 100 testy Status active
+alarm> Alarm(4) Printed by Display Alarm Thread(5) at 1733265911: Group(5) 20 tester
+Alarm(1) Printed by Display Alarm Thread(5) at 1733265912: Group(5) 60 test11
+Alarm(2) Printed by Display Alarm Thread(6) at 1733265916: Group(6) 60 test21
+Suspend_Alarm(34)
+Alarm(4) Suspended at 1733265920:20 tester
+alarm> Suspend_Alarm(6)
+alarm> Suspend_Alarm(7)
+View_Alarms
+Reactivate_Alarm(34)
+View_Alarms
+Start_Alarm(10): Group(1) 50 helo
+
